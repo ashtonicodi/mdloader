@@ -38,7 +38,7 @@ def dwd_audio_files(audio_objects):
     dwd_folder = 'F:\\Pycharm\\Projects\\mdloader\\download\\ForCoding\\'
     for audio_object in list(audio_objects):
         print(audio_object.title)
-
+        # Fix the unicode symbols in file name trouble
         result = rqst.urlretrieve(audio_object.dwd_link, dwd_folder + audio_object.artist + ' - ' + audio_object.title + '.mp3')
         print(result[0])
 
